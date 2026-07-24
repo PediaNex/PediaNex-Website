@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - sitemap.xml
+  workflow_dispatch: {}
 
 jobs:
   resubmit-sitemap:
