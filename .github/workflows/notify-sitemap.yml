@@ -1,0 +1,41 @@
+name: Notify Search Console of sitemap changes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - sitemap.xml
+
+jobs:
+  resubmit-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resubmit sitemap.xml to Google Search Console
+        env:
+          GOOGLE_SEARCH_CONSOLE_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_KEY }}
+        run: |
+          echo "$GOOGLE_SEARCH_CONSOLE_KEY" > /tmp/gsc-key.json
+          pip install --quiet google-auth
+          python3 - <<'EOF'
+          import urllib.parse
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import AuthorizedSession
+
+          creds = service_account.Credentials.from_service_account_file(
+              "/tmp/gsc-key.json",
+              scopes=["https://www.googleapis.com/auth/webmasters"],
+          )
+          sess = AuthorizedSession(creds)
+
+          site = "sc-domain:pedianex.co.in"
+          sitemap_url = "https://pedianex.co.in/sitemap.xml"
+          endpoint = (
+              "https://www.googleapis.com/webmasters/v3/sites/"
+              f"{urllib.parse.quote(site, safe='')}/sitemaps/"
+              f"{urllib.parse.quote(sitemap_url, safe='')}"
+          )
+
+          resp = sess.put(endpoint)
+          print("Resubmit status:", resp.status_code, resp.text)
+          resp.raise_for_status()
+          EOF
