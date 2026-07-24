@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — PediaNex</title>
+<meta name="description" content="PediaNex pricing for independent pediatric practices — simple, sized to clinic size, confirmed on a walkthrough call." />
+<link rel="canonical" href="https://pedianex.co.in/pricing.html" />
+<meta name="robots" content="noindex" />
+<!--
+  DEMO PAGE — placeholder figures, not final pricing.
+  Public pricing is still being finalized per the homepage FAQ. Replace the figures
+  and tiers below with real numbers before removing the noindex tag and linking
+  this page from primary navigation / the sitemap.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" /></noscript>
+<style>
+  :root{
+    --paper:#FFFFFF; --surface:#F5F7FA; --surface-2:#EDF1F6;
+    --ink:#0A0A0A; --ink-soft:#3D3D3D; --muted:#6B7280;
+    --blue:#1C4FB8; --blue-deep:#12275C; --blue-tint:#E8EFFE;
+    --line:rgba(10,10,10,0.12); --line-soft:rgba(10,10,10,0.06);
+    --shadow:0 1px 2px rgba(10,20,40,.08),0 14px 30px rgba(10,20,40,.10);
+    --radius:16px;
+    --display:"Bricolage Grotesque",system-ui,sans-serif;
+    --ui:"Public Sans",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Spline Sans Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--ui); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  section{padding:56px 0;}
+  h1,h2,h3{font-family:var(--display); font-weight:700; letter-spacing:-.01em; margin:0;}
+  p{margin:0;}
+
+  header.site{position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-soft);}
+  header.site .wrap{display:flex; align-items:center; justify-content:space-between; height:70px;}
+  .logo{display:flex; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:1.125rem;}
+  .logo .mark{width:26px; height:26px; border-radius:8px; background:var(--blue); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.875rem; padding:13px 24px; border-radius:10px; border:1px solid transparent; cursor:pointer; white-space:nowrap;}
+  .btn-primary{background:var(--blue-deep); color:#fff;}
+
+  .demo-banner{background:#FFF3D6; color:#5C4400; text-align:center; padding:10px 20px; font-size:.85rem; font-weight:600;}
+
+  .hero{padding:64px 0 24px; text-align:center;}
+  .hero .eyebrow{display:inline-flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:.07em; font-size:.75rem; font-weight:700; color:var(--blue); margin-bottom:14px;}
+  .hero h1{font-size:clamp(2rem,1.6rem+1.8vw,2.6rem); line-height:1.15; margin-bottom:16px;}
+  .hero p.lede{font-size:1.125rem; color:var(--ink-soft); max-width:52ch; margin:0 auto;}
+
+  .tier-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px;}
+  @media (max-width:900px){ .tier-grid{grid-template-columns:1fr;} }
+  .tier{background:var(--paper); border:1px solid var(--line-soft); border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column;}
+  .tier.featured{border-color:var(--blue); box-shadow:var(--shadow); position:relative;}
+  .tier.featured::before{content:"Most common"; position:absolute; top:-13px; left:28px; background:var(--blue); color:#fff; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:5px 12px; border-radius:999px;}
+  .tier h3{font-size:1.05rem; margin-bottom:6px;}
+  .tier .tier-sub{color:var(--muted); font-size:.875rem; margin-bottom:18px;}
+  .tier .price{font-family:var(--display); font-size:2rem; font-weight:700; color:var(--blue); margin-bottom:2px;}
+  .tier .price .placeholder-tag{font-family:var(--ui); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; background:#FFF3D6; color:#7A5A00; padding:2px 7px; border-radius:5px; vertical-align:middle; margin-left:6px;}
+  .tier .price-note{color:var(--muted); font-size:.8rem; margin-bottom:22px;}
+  .tier ul{list-style:none; padding:0; margin:0 0 26px; display:flex; flex-direction:column; gap:10px; font-size:.9rem; color:var(--ink-soft); flex-grow:1;}
+  .tier li{display:flex; gap:8px; align-items:flex-start;}
+  .tier li svg{flex-shrink:0; margin-top:3px;}
+  .tier .btn{width:100%; justify-content:center;}
+  .tier.featured .btn-primary{background:var(--blue-deep);}
+  .tier:not(.featured) .btn{background:transparent; border-color:var(--line); color:var(--ink);}
+
+  .note{max-width:640px; margin:40px auto 0; text-align:center; color:var(--muted); font-size:.9rem;}
+
+  .faq-strip{background:var(--surface); border-radius:20px; padding:36px 40px; margin-top:56px;}
+  .faq-strip h2{font-size:1.2rem; margin-bottom:8px;}
+  .faq-strip p{color:var(--ink-soft); font-size:.95rem; max-width:60ch;}
+
+  footer.site{background:var(--blue-deep); color:#DCE6F5; padding:36px 0;}
+  footer.site .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.85rem;}
+  footer.site a{color:#DCE6F5;}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">Demo page — figures below are illustrative only. Real pricing is confirmed on a walkthrough call.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <span class="mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 9 C 3 9, 3 3, 5 3 C 7 3, 7 7, 9 7 C 10.5 7, 11.5 5, 13 5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      PediaNex
+    </a>
+    <a class="btn btn-primary" href="https://wa.me/917357397888" target="_blank" rel="noopener">Book a walkthrough</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Pricing</span>
+      <h1>Simple pricing, sized for independent practices.</h1>
+      <p class="lede">No per-feature upsells, no hidden setup fees. Pricing scales with the number of doctors using PediaNex at your clinic — confirmed for your practice on a short walkthrough call.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="tier-grid">
+
+        <div class="tier">
+          <h3>Solo Practice</h3>
+          <p class="tier-sub">For a single doctor</p>
+          <div class="price">₹<span class="placeholder-tag">TBD</span></div>
+          <p class="price-note">per doctor / month, billed annually</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>WHO &amp; IAP growth charts</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>IAP vaccination tracking</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>WhatsApp prescriptions</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>QR self check-in</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Parent portal</li>
+          </ul>
+          <a class="btn" href="https://wa.me/917357397888" target="_blank" rel="noopener">Talk to us</a>
+        </div>
+
+        <div class="tier featured">
+          <h3>Clinic</h3>
+          <p class="tier-sub">For 2–5 doctors, one location</p>
+          <div class="price">₹<span class="placeholder-tag">TBD</span></div>
+          <p class="price-note">per doctor / month, billed annually</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Solo Practice</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Shared front-desk queue</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Free record migration</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority WhatsApp support</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Camp / school screening mode</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/917357397888" target="_blank" rel="noopener">Book a walkthrough</a>
+        </div>
+
+        <div class="tier">
+          <h3>Multi-location</h3>
+          <p class="tier-sub">For clinic groups &amp; multiple branches</p>
+          <div class="price">Custom</div>
+          <p class="price-note">Volume pricing, quoted directly</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Clinic</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-branch record access</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated onboarding</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Volume-based pricing</li>
+          </ul>
+          <a class="btn" href="https://wa.me/917357397888" target="_blank" rel="noopener">Talk to us</a>
+        </div>
+
+      </div>
+
+      <p class="note">All plans include free record migration from your existing system, unlimited patients, and no setup fee. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
+
+      <div class="faq-strip">
+        <h2>Still figuring out cost?</h2>
+        <p>We're finalizing public pricing while onboarding the first practices outside our founding clinic. Book a 20-minute walkthrough on your own sample data, and we'll quote a number sized to your practice — no obligation.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 PediaNex.</span>
+    <span><a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

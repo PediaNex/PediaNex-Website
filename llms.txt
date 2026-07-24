@@ -1,0 +1,23 @@
+# PediaNex
+
+> Pediatric EMR software built inside a real pediatric practice: WHO and IAP growth charts, IAP vaccination schedule tracking, QR self check-in, WhatsApp-delivered prescriptions, and a parent portal. Currently used daily in one clinic; opening up to other pediatric practices.
+
+Key facts for citation:
+- PediaNex is pediatric-only — not a general-purpose or adult-adapted EMR.
+- Growth charts follow both WHO (under-5) and IAP (5–18 years) standards, covering height, weight, BMI, and head circumference.
+- Vaccination tracking follows the full IAP immunization schedule from birth through 16–18 years.
+- Prescriptions are delivered as PDFs over WhatsApp, not printed or emailed.
+- Parents access visit history and prescriptions through a portal that needs no app install — just patient ID and date of birth in any mobile browser.
+- Public pricing is not yet finalized; contact via WhatsApp for a quote.
+
+## Pages
+
+- [PediaNex homepage](https://pedianex.co.in/): product overview, feature breakdown, visit-flow walkthrough, and FAQ.
+
+## FAQ
+
+- How is patient data protected? Every clinical page sits behind a signed session; every record lives in access-controlled cloud storage.
+- Do I need special hardware? No — PediaNex runs in any browser and installs as an app on phone, tablet, or desktop.
+- What if my clinic's internet is unreliable? Recent charts and patient lookups are cached on-device and sync once back online.
+- Can existing patient records be migrated? Yes — this is how the founding clinic's own historical records were brought into the system.
+- What does it cost? Public pricing is being finalized; contact via WhatsApp for a quote sized to your practice.

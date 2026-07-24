@@ -41,6 +41,9 @@ Thumbs.db
 # Claude
 .claude/
 
+# SEO audit output (local working notes, not site content)
+pedianex.co.in-audit/
+
 # Misc
 *.local
 coverage/
