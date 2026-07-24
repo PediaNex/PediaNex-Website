@@ -46,8 +46,12 @@ Thumbs.db
 # Claude
 .claude/
 
-# SEO audit output (local working notes, not site content)
+# SEO audit/plan output (local working notes, not site content)
 pedianex.co.in-audit/
+seo-plan/
+
+# Search-engine verification file (already committed; pattern kept for reference)
+dc94bcd575ef04dae86b0beb9f8e6ae3.txt
 
 # Misc
 *.local
