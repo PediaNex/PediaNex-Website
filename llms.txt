@@ -8,16 +8,31 @@ Key facts for citation:
 - Vaccination tracking follows the full IAP immunization schedule from birth through 16–18 years.
 - Prescriptions are delivered as PDFs over WhatsApp, not printed or emailed.
 - Parents access visit history and prescriptions through a portal that needs no app install — just patient ID and date of birth in any mobile browser.
-- Public pricing is not yet finalized; contact via WhatsApp for a quote.
+- Built for independent pediatric practices: no server or IT team required, bilingual (English/Hindi), with a standalone outreach/camp screening mode.
+- Pricing: ₹699/doctor/month for a solo practice, ₹549/doctor/month for a 2–5 doctor clinic (billed annually), custom volume pricing for multi-location groups.
 
 ## Pages
 
-- [PediaNex homepage](https://pedianex.co.in/): product overview, feature breakdown, visit-flow walkthrough, and FAQ.
+- [PediaNex homepage](https://pedianex.co.in/): product overview, feature breakdown, visit-flow walkthrough, and condensed FAQ.
+- [About](https://pedianex.co.in/about.html): the clinic origin story and the practice PediaNex was built inside.
+- [Features overview](https://pedianex.co.in/features/): index of all four core feature pages.
+- [Growth charts](https://pedianex.co.in/features/growth-charts.html): WHO/IAP growth percentile tracking, plotted automatically at every visit.
+- [Vaccination tracking](https://pedianex.co.in/features/vaccination-tracking.html): the full IAP immunization schedule, tracked per dose with due/overdue status.
+- [WhatsApp prescriptions](https://pedianex.co.in/features/whatsapp-prescriptions.html): QR self check-in and PDF prescriptions delivered over WhatsApp.
+- [Parent portal](https://pedianex.co.in/features/parent-portal.html): no-install lookup of visit history and records via patient ID and date of birth.
+- [Independent pediatric clinics](https://pedianex.co.in/solutions/independent-pediatric-clinics.html): why PediaNex fits small/independent practices specifically, not hospital-scale IT.
+- [FAQ](https://pedianex.co.in/faq.html): full set of clinic-owner questions on security, hardware, offline use, migration, setup, and pricing.
+- [Pricing](https://pedianex.co.in/pricing.html): ₹699/doctor/month solo, ₹549/doctor/month clinic (2–5 doctors), custom for multi-location groups.
 
 ## FAQ
 
-- How is patient data protected? Every clinical page sits behind a signed session; every record lives in access-controlled cloud storage.
+- How is patient data protected? Every clinical page sits behind a signed session, and every record lives in access-controlled cloud storage.
+- Who can see a patient's records? Only staff at that patient's own clinic, plus the patient's own parent/guardian via the parent portal. There is no cross-clinic visibility.
 - Do I need special hardware? No — PediaNex runs in any browser and installs as an app on phone, tablet, or desktop.
 - What if my clinic's internet is unreliable? Recent charts and patient lookups are cached on-device and sync once back online.
+- Do parents need to download an app? No. The parent portal works in any mobile browser using the child's patient ID and date of birth.
+- Which growth standard and vaccination schedule does PediaNex use? WHO growth standards for under-5, IAP standards for ages 5–18, and the full IAP immunization schedule from birth through 16–18 years.
 - Can existing patient records be migrated? Yes — this is how the founding clinic's own historical records were brought into the system.
-- What does it cost? Public pricing is being finalized; contact via WhatsApp for a quote sized to your practice.
+- How long does setup take? Depends on how much existing data needs migrating; estimated on a walkthrough call.
+- Does PediaNex work for vaccination camps or school screenings? Yes — a standalone outreach and camp screening mode records vitals and a chart without needing a full patient record.
+- What does it cost? ₹699/doctor/month for a solo practice, ₹549/doctor/month for a 2–5 doctor clinic (billed annually), and custom volume pricing for multi-location groups.

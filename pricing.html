@@ -4,15 +4,40 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pricing — PediaNex</title>
-<meta name="description" content="PediaNex pricing for independent pediatric practices — simple, sized to clinic size, confirmed on a walkthrough call." />
+<meta name="description" content="PediaNex pricing for independent pediatric practices: ₹699/doctor/month for solo practices, ₹549/doctor/month for 2-5 doctor clinics, custom pricing for multi-location groups." />
 <link rel="canonical" href="https://pedianex.co.in/pricing.html" />
-<meta name="robots" content="noindex" />
-<!--
-  DEMO PAGE — placeholder figures, not final pricing.
-  Public pricing is still being finalized per the homepage FAQ. Replace the figures
-  and tiers below with real numbers before removing the noindex tag and linking
-  this page from primary navigation / the sitemap.
--->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pedianex.co.in/pricing.html" />
+<meta property="og:title" content="Pricing — PediaNex" />
+<meta property="og:description" content="Simple pricing sized for independent pediatric practices: ₹699/doctor/month solo, ₹549/doctor/month for clinics, custom for multi-location groups." />
+<meta property="og:image" content="https://pedianex.co.in/assets/sample-growth-chart.png" />
+<meta property="og:image:width" content="1040" />
+<meta property="og:image:height" content="752" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pedianex.co.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://pedianex.co.in/pricing.html"}
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "PediaNex",
+      "url": "https://pedianex.co.in/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "offers": [
+        {"@type": "Offer", "name": "Solo Practice", "price": "699", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually", "eligibleQuantity": {"@type": "QuantitativeValue", "value": 1}, "url": "https://pedianex.co.in/pricing.html"},
+        {"@type": "Offer", "name": "Clinic", "price": "549", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5}, "url": "https://pedianex.co.in/pricing.html"}
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -98,8 +123,6 @@
 </head>
 <body>
 
-<div class="demo-banner">Demo page — figures below are illustrative only. Real pricing is confirmed on a walkthrough call.</div>
-
 <header class="site">
   <div class="wrap">
     <a class="logo" href="index.html">
@@ -127,7 +150,7 @@
           <h3>Solo Practice</h3>
           <p class="tier-sub">For a single doctor</p>
           <div class="price">₹699</div>
-          <p class="price-note">per doctor / month, billed annually · Negotiable</p>
+          <p class="price-note">per doctor / month, billed annually</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>WHO &amp; IAP growth charts</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>IAP vaccination tracking</li>
@@ -142,7 +165,7 @@
           <h3>Clinic</h3>
           <p class="tier-sub">For 2–5 doctors, one location</p>
           <div class="price">₹549</div>
-          <p class="price-note">per doctor / month, billed annually · Negotiable</p>
+          <p class="price-note">per doctor / month, billed annually</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Solo Practice</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Free record migration</li>
@@ -171,8 +194,8 @@
       <p class="note">All plans include unlimited patients and no setup fee. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
 
       <div class="faq-strip">
-        <h2>Still figuring out cost?</h2>
-        <p>We're finalizing public pricing while onboarding the first practices outside our founding clinic. Book a 20-minute walkthrough on your own sample data, and we'll quote a number sized to your practice — no obligation.</p>
+        <h2>Not sure which tier fits?</h2>
+        <p>Book a 20-minute walkthrough on your own sample data and we'll confirm the right tier and final number for your practice — no obligation.</p>
       </div>
     </div>
   </section>
