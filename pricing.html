@@ -77,6 +77,23 @@
   footer.site{background:var(--blue-deep); color:#DCE6F5; padding:36px 0;}
   footer.site .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:.85rem;}
   footer.site a{color:#DCE6F5;}
+
+  /* Walkthrough modal */
+  .wt-overlay{position:fixed; inset:0; background:rgba(4,10,18,.6); display:none; align-items:center; justify-content:center; padding:20px; z-index:100;}
+  .wt-overlay.open{display:flex;}
+  .wt-modal{background:var(--paper); border:1px solid var(--line-soft); border-radius:var(--radius); box-shadow:var(--shadow); width:100%; max-width:440px; padding:28px 26px; position:relative; max-height:90vh; overflow-y:auto;}
+  .wt-modal h3{font-size:1.125rem; margin:0 0 6px;}
+  .wt-modal .wt-sub{color:var(--ink-soft); font-size:.875rem; margin:0 0 22px;}
+  .wt-close{position:absolute; top:16px; right:16px; width:32px; height:32px; border-radius:50%; border:1px solid var(--line); background:transparent; color:var(--ink-soft); display:flex; align-items:center; justify-content:center; cursor:pointer;}
+  .wt-close:hover{border-color:var(--blue); color:var(--blue);}
+  .wt-field{margin-bottom:16px;}
+  .wt-field label{display:block; font-size:.875rem; font-weight:600; margin-bottom:6px; color:var(--ink);}
+  .wt-field input{width:100%; font:inherit; font-size:.875rem; padding:11px 13px; border-radius:9px; border:1px solid var(--line); background:var(--surface); color:var(--ink);}
+  .wt-field input:focus{outline:2px solid var(--blue); outline-offset:1px; border-color:var(--blue);}
+  .wt-modal .btn{width:100%; justify-content:center; margin-top:6px;}
+  .wt-err{color:#B8351F; font-size:.75rem; margin-top:4px; display:none;}
+  .wt-field.error input{border-color:#B8351F;}
+  .wt-field.error .wt-err{display:block;}
 </style>
 </head>
 <body>
@@ -89,7 +106,7 @@
       <span class="mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 9 C 3 9, 3 3, 5 3 C 7 3, 7 7, 9 7 C 10.5 7, 11.5 5, 13 5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
       PediaNex
     </a>
-    <a class="btn btn-primary" href="https://wa.me/917357397888" target="_blank" rel="noopener">Book a walkthrough</a>
+    <a class="btn btn-primary js-walkthrough-btn" href="#contact-modal">Book a walkthrough</a>
   </div>
 </header>
 
@@ -109,8 +126,8 @@
         <div class="tier">
           <h3>Solo Practice</h3>
           <p class="tier-sub">For a single doctor</p>
-          <div class="price">₹<span class="placeholder-tag">TBD</span></div>
-          <p class="price-note">per doctor / month, billed annually</p>
+          <div class="price">₹699</div>
+          <p class="price-note">per doctor / month, billed annually · Negotiable</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>WHO &amp; IAP growth charts</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>IAP vaccination tracking</li>
@@ -118,22 +135,21 @@
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>QR self check-in</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Parent portal</li>
           </ul>
-          <a class="btn" href="https://wa.me/917357397888" target="_blank" rel="noopener">Talk to us</a>
+          <a class="btn js-walkthrough-btn" href="#contact-modal" data-no-doctors="true">Talk to us</a>
         </div>
 
         <div class="tier featured">
           <h3>Clinic</h3>
           <p class="tier-sub">For 2–5 doctors, one location</p>
-          <div class="price">₹<span class="placeholder-tag">TBD</span></div>
-          <p class="price-note">per doctor / month, billed annually</p>
+          <div class="price">₹549</div>
+          <p class="price-note">per doctor / month, billed annually · Negotiable</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Solo Practice</li>
-            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Shared front-desk queue</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Free record migration</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority WhatsApp support</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Camp / school screening mode</li>
           </ul>
-          <a class="btn btn-primary" href="https://wa.me/917357397888" target="_blank" rel="noopener">Book a walkthrough</a>
+          <a class="btn btn-primary js-walkthrough-btn" href="#contact-modal">Book a walkthrough</a>
         </div>
 
         <div class="tier">
@@ -147,12 +163,12 @@
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated onboarding</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Volume-based pricing</li>
           </ul>
-          <a class="btn" href="https://wa.me/917357397888" target="_blank" rel="noopener">Talk to us</a>
+          <a class="btn js-walkthrough-btn" href="#contact-modal">Talk to us</a>
         </div>
 
       </div>
 
-      <p class="note">All plans include free record migration from your existing system, unlimited patients, and no setup fee. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
+      <p class="note">All plans include unlimited patients and no setup fee. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
 
       <div class="faq-strip">
         <h2>Still figuring out cost?</h2>
@@ -162,12 +178,105 @@
   </section>
 </main>
 
+<div class="wt-overlay" id="wtOverlay">
+  <div class="wt-modal" role="dialog" aria-modal="true" aria-labelledby="wtTitle">
+    <button type="button" class="wt-close" id="wtClose" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 1 L13 13 M13 1 L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <h3 id="wtTitle">Book a walkthrough</h3>
+    <p class="wt-sub">Tell us a bit about your practice and we'll open WhatsApp with your details ready to send.</p>
+    <form id="wtForm" novalidate>
+      <div class="wt-field" id="wtNameField">
+        <label for="wtName">Your name</label>
+        <input type="text" id="wtName" name="wtName" autocomplete="name" />
+        <div class="wt-err">Please enter your name.</div>
+      </div>
+      <div class="wt-field" id="wtRoleField">
+        <label for="wtRole">Position in the clinic / hospital</label>
+        <input type="text" id="wtRole" name="wtRole" placeholder="e.g. Pediatrician, Clinic Manager" />
+        <div class="wt-err">Please enter your position.</div>
+      </div>
+      <div class="wt-field" id="wtDoctorsField">
+        <label for="wtDoctors">Number of doctors who'd use the app</label>
+        <input type="number" id="wtDoctors" name="wtDoctors" min="1" inputmode="numeric" />
+        <div class="wt-err">Please enter a number.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Continue to WhatsApp</button>
+    </form>
+  </div>
+</div>
+
 <footer class="site">
   <div class="wrap">
     <span>&copy; 2026 PediaNex.</span>
     <span><a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a></span>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var overlay = document.getElementById('wtOverlay');
+    var closeBtn = document.getElementById('wtClose');
+    var form = document.getElementById('wtForm');
+    var nameField = document.getElementById('wtName');
+    var roleField = document.getElementById('wtRole');
+    var doctorsField = document.getElementById('wtDoctors');
+    var doctorsFieldWrap = document.getElementById('wtDoctorsField');
+    var triggers = document.querySelectorAll('.js-walkthrough-btn');
+    if (!overlay || !form || triggers.length === 0) return;
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      var noDoctors = e && e.currentTarget && e.currentTarget.dataset.noDoctors === 'true';
+      doctorsFieldWrap.style.display = noDoctors ? 'none' : '';
+      doctorsField.value = '';
+      clearError(doctorsFieldWrap);
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      nameField.focus();
+    }
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function clearError(fieldWrap) { fieldWrap.classList.remove('error'); }
+    function setError(fieldWrap) { fieldWrap.classList.add('error'); }
+
+    triggers.forEach(function (btn) { btn.addEventListener('click', openModal); });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = nameField.value.trim();
+      var role = roleField.value.trim();
+      var doctorsVisible = doctorsFieldWrap.style.display !== 'none';
+      var doctors = doctorsField.value.trim();
+      var valid = true;
+
+      var fieldsToCheck = [ [nameField, name], [roleField, role] ];
+      if (doctorsVisible) fieldsToCheck.push([doctorsField, doctors]);
+
+      fieldsToCheck.forEach(function (pair) {
+        var fieldWrap = pair[0].closest('.wt-field');
+        if (!pair[1]) { setError(fieldWrap); valid = false; }
+        else { clearError(fieldWrap); }
+      });
+      if (!valid) return;
+
+      var message = "Hello Aaditya, I'm interested in the child pediatric EMR (PediaNex)." +
+        "\n\nName: " + name +
+        "\nPosition: " + role +
+        (doctorsVisible ? "\nNumber of doctors who'd use the app: " + doctors : "");
+
+      var url = "https://wa.me/917357397888?text=" + encodeURIComponent(message);
+      window.open(url, '_blank', 'noopener');
+      closeModal();
+      form.reset();
+    });
+  })();
+</script>
 
 </body>
 </html>

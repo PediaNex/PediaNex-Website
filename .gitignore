@@ -16,6 +16,11 @@ out/
 .env.local
 .env.*.local
 
+# Secrets / service account keys — never commit these
+key/
+*.json.key
+service_account*.json
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
