@@ -139,6 +139,15 @@
   .related-card h3{font-size:var(--text-md); margin-bottom:6px;}
   .related-card p{color:var(--ink-soft); font-size:var(--text-sm); margin:0;}
 
+  .spec-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px;}
+  @media (max-width:760px){ .spec-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .spec-grid{grid-template-columns:1fr;} }
+  .spec-tile{background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:22px 20px; transition:border-color .15s ease, transform .15s ease;}
+  .spec-tile:hover{border-color:var(--blue); transform:translateY(-2px);}
+  .spec-tile .spec-icon{width:34px; height:34px; border-radius:9px; background:var(--blue-tint); color:var(--blue); display:flex; align-items:center; justify-content:center; margin-bottom:14px;}
+  .spec-tile h4{font-family:var(--display); font-size:var(--text-base); font-weight:700; margin:0 0 6px;}
+  .spec-tile p{font-size:var(--text-sm); color:var(--ink-soft); margin:0;}
+
   .faq-group{margin-bottom:20px;}
   details{border-bottom:1px solid var(--line-soft); padding:16px 0;}
   details summary{cursor:pointer; font-weight:600; font-size:var(--text-md); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;}
@@ -182,13 +191,13 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="logo" href="../index.html#top">
+    <a class="logo" href="/#top">
       <span class="mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 9 C 3 9, 3 3, 5 3 C 7 3, 7 7, 9 7 C 10.5 7, 11.5 5, 13 5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
       PediaNex
     </a>
     <nav class="primary" aria-label="Primary" id="primaryNav">
-      <a href="../index.html#features">Features</a>
-      <a href="../index.html#flow">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#flow">How it works</a>
       <a href="../pricing.html">Pricing</a>
       <a href="../faq.html">FAQ</a>
     </nav>
@@ -201,7 +210,7 @@
   </div>
 </header>
 
-<div class="breadcrumb wrap"><a href="../index.html#top">Home</a> / Growth Charts</div>
+<div class="breadcrumb wrap"><a href="/#top">Home</a> / Growth Charts</div>
 
 <main>
   <section class="hero">
@@ -238,6 +247,47 @@
       <div class="mid-cta">
         <p>Still tracking growth on a paper percentile card?</p>
         <a class="btn btn-primary js-walkthrough-btn" href="#contact-modal">Book a walkthrough</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">At a glance</span>
+        <h2>What's tracked, on every visit.</h2>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Two standards, matched automatically</h4>
+          <p>WHO for children under 5, IAP for ages 5 to 18 — PediaNex switches the moment a birthdate crosses the line, no manual lookup.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Four metrics per visit</h4>
+          <p>Height, weight, BMI, and head circumference — all charted, not just recorded as a number in a table.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Plotted live, mid-visit</h4>
+          <p>Each measurement lands on the correct percentile curve the moment it's entered — no flipping through a reference booklet.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Clinic-grade PDF export</h4>
+          <p>Every chart renders on screen and again as a print-ready PDF, so a copy can leave the room with the family.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Trend, not a single point</h4>
+          <p>The last several visits sit on screen together, so a doctor sees whether a child is tracking their curve or has started to drift.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>BMI calculated, not hand-worked</h4>
+          <p>Height and weight are enough — PediaNex does the BMI math and plots it on its own curve automatically.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -335,7 +385,7 @@
       </div>
       <div>
         <h3>Product</h3>
-        <ul><li><a href="../index.html#features">Features</a></li><li><a href="../index.html#flow">How it works</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../faq.html">FAQ</a></li></ul>
+        <ul><li><a href="/#features">Features</a></li><li><a href="/#flow">How it works</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../faq.html">FAQ</a></li></ul>
       </div>
       <div>
         <h3>Get in touch</h3>

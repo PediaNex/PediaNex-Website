@@ -139,6 +139,15 @@
   .related-card h3{font-size:var(--text-md); margin-bottom:6px;}
   .related-card p{color:var(--ink-soft); font-size:var(--text-sm); margin:0;}
 
+  .spec-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px;}
+  @media (max-width:760px){ .spec-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .spec-grid{grid-template-columns:1fr;} }
+  .spec-tile{background:var(--surface); border:1px solid var(--line-soft); border-radius:14px; padding:22px 20px; transition:border-color .15s ease, transform .15s ease;}
+  .spec-tile:hover{border-color:var(--blue); transform:translateY(-2px);}
+  .spec-tile .spec-icon{width:34px; height:34px; border-radius:9px; background:var(--blue-tint); color:var(--blue); display:flex; align-items:center; justify-content:center; margin-bottom:14px;}
+  .spec-tile h4{font-family:var(--display); font-size:var(--text-base); font-weight:700; margin:0 0 6px;}
+  .spec-tile p{font-size:var(--text-sm); color:var(--ink-soft); margin:0;}
+
   .faq-group{margin-bottom:20px;}
   details{border-bottom:1px solid var(--line-soft); padding:16px 0;}
   details summary{cursor:pointer; font-weight:600; font-size:var(--text-md); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;}
@@ -182,13 +191,13 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="logo" href="../index.html#top">
+    <a class="logo" href="/#top">
       <span class="mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 9 C 3 9, 3 3, 5 3 C 7 3, 7 7, 9 7 C 10.5 7, 11.5 5, 13 5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
       PediaNex
     </a>
     <nav class="primary" aria-label="Primary" id="primaryNav">
-      <a href="../index.html#features">Features</a>
-      <a href="../index.html#flow">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#flow">How it works</a>
       <a href="../pricing.html">Pricing</a>
       <a href="../faq.html">FAQ</a>
     </nav>
@@ -201,7 +210,7 @@
   </div>
 </header>
 
-<div class="breadcrumb wrap"><a href="../index.html#top">Home</a> / Vaccination Tracking</div>
+<div class="breadcrumb wrap"><a href="/#top">Home</a> / Vaccination Tracking</div>
 
 <main>
   <section class="hero">
@@ -238,6 +247,47 @@
       <div class="mid-cta">
         <p>Still checking a wall chart against a paper immunization card?</p>
         <a class="btn btn-primary js-walkthrough-btn" href="#contact-modal">Book a walkthrough</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">At a glance</span>
+        <h2>What the schedule actually tracks.</h2>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Birth to 16-18 years</h4>
+          <p>The complete IAP immunization schedule loads automatically for every new patient, start to finish.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Grouped by milestone</h4>
+          <p>Birth dose, 6 week, 10 week, 14 week, 6 month, 9 month, and on through the teenage boosters — the way parents actually think about it.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Live due / overdue status</h4>
+          <p>Calculated from the child's age on the spot — no cross-referencing a wall chart mid-visit.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Brand and date, per dose</h4>
+          <p>Once a dose is given, it's logged permanently against that milestone — a real history, not a checkbox.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Consistent across doctors</h4>
+          <p>A second doctor covering a shift sees the same status a regular doctor would, without paging back through a paper card.</p>
+        </div>
+        <div class="spec-tile">
+          <span class="spec-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>Holds up for one-off visits</h4>
+          <p>The record doesn't depend on one doctor's memory — it works the same for a travel visit or a switched-doctor follow-up.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -335,7 +385,7 @@
       </div>
       <div>
         <h3>Product</h3>
-        <ul><li><a href="../index.html#features">Features</a></li><li><a href="../index.html#flow">How it works</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../faq.html">FAQ</a></li></ul>
+        <ul><li><a href="/#features">Features</a></li><li><a href="/#flow">How it works</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../faq.html">FAQ</a></li></ul>
       </div>
       <div>
         <h3>Get in touch</h3>
