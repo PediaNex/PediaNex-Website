@@ -104,6 +104,7 @@
   .hero h1{font-size:var(--h1-size); line-height:1.15; margin:14px 0 12px;}
   .hero .byline{font-size:var(--text-sm); color:var(--muted); margin:0 0 18px;}
   .hero .lede{font-size:var(--text-md); line-height:1.6; color:var(--ink-soft); max-width:68ch; margin:0 0 20px;}
+  .quick-answer{background:var(--blue-tint); border-left:3px solid var(--blue); border-radius:8px; padding:14px 18px; font-size:var(--text-sm); color:#1E2E4D; max-width:68ch; margin:0 0 8px; line-height:1.6;}
 
   .article{max-width:72ch; margin:0 auto;}
   .article h2{margin:40px 0 14px;}
@@ -164,6 +165,13 @@
   .foot-grid a:hover{color:#fff;}
   .foot-grid p{font-size:var(--text-sm); color:#9FB6DC; max-width:30ch;}
   .foot-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:22px; font-size:var(--text-xs); color:#9FB6DC; flex-wrap:wrap; gap:10px;}
+
+  .back-nav{padding:10px 0 0;}
+  .back-to-blog{display:inline-flex; align-items:center; gap:7px; font-size:var(--text-sm); font-weight:700; color:var(--blue); white-space:nowrap;}
+  .back-to-blog svg{flex-shrink:0;}
+  .back-to-blog:hover{gap:11px;}
+  .more, .btn-link, .wa{white-space:nowrap;}
+  body{background-image:radial-gradient(var(--line-soft) 1.2px, transparent 1.2px); background-size:24px 24px;}
 </style>
 </head>
 <body>
@@ -190,6 +198,7 @@
 </header>
 
 <div class="breadcrumb wrap"><a href="/#top">Home</a> / <a href="index.html">Blog</a> / Why We Built PediaNex</div>
+<div class="wrap back-nav"><a class="back-to-blog" href="index.html"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> All guides</a></div>
 
 <main>
   <section class="hero">
@@ -197,6 +206,7 @@
       <span class="eyebrow">Our story &middot; 5 min read</span>
       <h1>Why We Built PediaNex</h1>
       <p class="byline">Published July 25, 2026 &middot; PediaNex Team</p>
+      <p class="quick-answer">PediaNex was built inside a working pediatric practice to fix specific, everyday friction — slow check-in, growth data that didn't plot against the right reference standard, and vaccination doses that were easy to lose track of on paper — not as a product idea pitched from outside a clinic. It stayed pediatric-specific because generic clinic software tends to treat growth charts and vaccination schedules as an afterthought, and it only opened up to other independent practices once those workflows had been proven under real clinical load: 2,300+ prescriptions and 2,000+ patients on record in the founding clinic alone.</p>
       <p class="lede">PediaNex didn't start with a market analysis or a pitch deck. It started because one working pediatric practice needed check-in, growth charting, prescriptions, and vaccination tracking to actually work — and building something bespoke for the clinic's own front desk turned out to be more useful than adapting a generic system.</p>
     </div>
   </section>
@@ -217,6 +227,15 @@
       </div>
 
       <p>Those numbers, from the founding clinic alone, are what "proven under real clinical load" actually means here — normal, everyday use across thousands of visits, not a curated demo dataset built to look good.</p>
+
+      <h2>The problems it was actually built to fix</h2>
+      <p>None of PediaNex's core features started as a roadmap item — each one exists because a specific part of a normal clinic day was slower or less reliable than it should have been:</p>
+      <ul>
+        <li><strong>Check-in that depended on the front desk being free.</strong> A parent arriving mid-morning had to wait for reception before they were even logged into the queue, which became the actual bottleneck on a busy day, not the consult itself.</li>
+        <li><strong>Growth data that meant nothing without the right chart.</strong> A height or weight number is only useful plotted against the correct reference standard for the child's age — doing that by hand, consistently, across a full patient load, wasn't sustainable.</li>
+        <li><strong>Vaccination doses that relied on a parent's memory.</strong> A paper card left at home or a missed follow-up call meant a dose could slip past due without anyone at the clinic noticing until the parent happened to ask.</li>
+        <li><strong>Prescriptions that stopped at the printer.</strong> A printed prescription can be lost, and a photo of one taken on a phone is hard to read later — sending it directly to a parent's phone, tied to the record, closed that gap.</li>
+      </ul>
 
       <h2>Why it stayed pediatric-specific</h2>
       <p>A general clinic management system could technically hold a child's record, but a pediatric practice runs on things a general system tends to treat as an afterthought: growth trends that only mean something plotted against the right reference standard, and a vaccination schedule where "on time" and "overdue" have to be tracked automatically, not manually re-checked at every visit. Building for one pediatric practice's actual needs, rather than a broad and generic feature set, is what made those two things central rather than optional.</p>
