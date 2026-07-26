@@ -83,10 +83,10 @@
   .tier.featured::before{content:"Most common"; position:absolute; top:-13px; left:28px; background:var(--blue); color:#fff; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:5px 12px; border-radius:999px;}
   .tier h3{font-size:1.05rem; margin-bottom:6px;}
   .tier .tier-sub{color:var(--muted); font-size:.875rem; margin-bottom:18px;}
-  .price-row{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .price-row{display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; margin-bottom:3px;}
   .tier .price-old{font-family:var(--display); font-size:1.15rem; font-weight:700; color:var(--muted); text-decoration:line-through; text-decoration-color:#B8351F; text-decoration-thickness:1.5px;}
-  .tier .save-tag{font-size:.7rem; font-weight:700; color:#B8351F; background:#FBE7E2; padding:3px 9px; border-radius:999px; text-transform:uppercase; letter-spacing:.04em;}
-  .tier .price{font-family:var(--display); font-size:2rem; font-weight:700; color:var(--blue); margin-bottom:2px;}
+  .tier .price{font-family:var(--display); font-size:2rem; font-weight:700; color:var(--blue); margin:0;}
+  .tier .save-tag{font-size:.7rem; font-weight:700; color:#B8351F; background:#FBE7E2; padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.04em; align-self:center;}
   .tier .price .placeholder-tag{font-family:var(--ui); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; background:#FFF3D6; color:#7A5A00; padding:2px 7px; border-radius:5px; vertical-align:middle; margin-left:6px;}
   .tier .price-note{color:var(--muted); font-size:.8rem; margin-bottom:10px;}
   .tier .trial-badge{display:inline-flex; align-items:center; gap:6px; font-size:.75rem; font-weight:700; color:#0F7B4F; background:#E4F6EC; padding:5px 11px; border-radius:999px; margin-bottom:22px; width:fit-content;}
@@ -153,8 +153,7 @@
         <div class="tier">
           <h3>Solo Practice</h3>
           <p class="tier-sub">For a single doctor</p>
-          <div class="price-row"><span class="price-old">₹699</span><span class="save-tag">26% off</span></div>
-          <div class="price">₹519</div>
+          <div class="price-row"><span class="price-old">₹699</span><span class="price">₹519</span><span class="save-tag">26% off</span></div>
           <p class="price-note">per doctor / month, billed annually &middot; negotiable</p>
           <p class="trial-badge">15-day free trial</p>
           <ul>
@@ -170,8 +169,7 @@
         <div class="tier featured">
           <h3>Clinic</h3>
           <p class="tier-sub">For 2–5 doctors, one location</p>
-          <div class="price-row"><span class="price-old">₹549</span><span class="save-tag">18% off</span></div>
-          <div class="price">₹449</div>
+          <div class="price-row"><span class="price-old">₹549</span><span class="price">₹449</span><span class="save-tag">18% off</span></div>
           <p class="price-note">per doctor / month, billed annually &middot; negotiable</p>
           <p class="trial-badge">15-day free trial</p>
           <ul>
