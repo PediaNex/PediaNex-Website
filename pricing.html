@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pricing — PediaNex</title>
-<meta name="description" content="PediaNex pricing for independent pediatric practices: ₹699/doctor/month for solo practices, ₹549/doctor/month for 2-5 doctor clinics (both negotiable), custom pricing for multi-location groups." />
+<meta name="description" content="PediaNex pricing for independent pediatric practices: ₹519/doctor/month for solo practices, ₹449/doctor/month for 2-5 doctor clinics (both negotiable, 15-day free trial), custom pricing for multi-location groups." />
 <link rel="canonical" href="https://pedianex.co.in/pricing.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pedianex.co.in/pricing.html" />
 <meta property="og:title" content="Pricing — PediaNex" />
-<meta property="og:description" content="Simple pricing sized for independent pediatric practices: ₹699/doctor/month solo, ₹549/doctor/month for clinics (negotiable), custom for multi-location groups." />
+<meta property="og:description" content="Simple pricing sized for independent pediatric practices: ₹519/doctor/month solo, ₹449/doctor/month for clinics (negotiable, 15-day free trial), custom for multi-location groups." />
 <meta property="og:image" content="https://pedianex.co.in/assets/sample-growth-chart.png" />
 <meta property="og:image:width" content="1040" />
 <meta property="og:image:height" content="752" />
@@ -31,8 +31,8 @@
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Web",
       "offers": [
-        {"@type": "Offer", "name": "Solo Practice", "price": "699", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually, negotiable", "eligibleQuantity": {"@type": "QuantitativeValue", "value": 1}, "url": "https://pedianex.co.in/pricing.html"},
-        {"@type": "Offer", "name": "Clinic", "price": "549", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually, negotiable", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5}, "url": "https://pedianex.co.in/pricing.html"}
+        {"@type": "Offer", "name": "Solo Practice", "price": "519", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually, negotiable, 15-day free trial", "eligibleQuantity": {"@type": "QuantitativeValue", "value": 1}, "url": "https://pedianex.co.in/pricing.html"},
+        {"@type": "Offer", "name": "Clinic", "price": "449", "priceCurrency": "INR", "unitText": "per doctor per month, billed annually, negotiable, 15-day free trial", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5}, "url": "https://pedianex.co.in/pricing.html"}
       ]
     }
   ]
@@ -85,7 +85,8 @@
   .tier .tier-sub{color:var(--muted); font-size:.875rem; margin-bottom:18px;}
   .tier .price{font-family:var(--display); font-size:2rem; font-weight:700; color:var(--blue); margin-bottom:2px;}
   .tier .price .placeholder-tag{font-family:var(--ui); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; background:#FFF3D6; color:#7A5A00; padding:2px 7px; border-radius:5px; vertical-align:middle; margin-left:6px;}
-  .tier .price-note{color:var(--muted); font-size:.8rem; margin-bottom:22px;}
+  .tier .price-note{color:var(--muted); font-size:.8rem; margin-bottom:10px;}
+  .tier .trial-badge{display:inline-flex; align-items:center; gap:6px; font-size:.75rem; font-weight:700; color:#0F7B4F; background:#E4F6EC; padding:5px 11px; border-radius:999px; margin-bottom:22px; width:fit-content;}
   .tier ul{list-style:none; padding:0; margin:0 0 26px; display:flex; flex-direction:column; gap:10px; font-size:.9rem; color:var(--ink-soft); flex-grow:1;}
   .tier li{display:flex; gap:8px; align-items:flex-start;}
   .tier li svg{flex-shrink:0; margin-top:3px;}
@@ -149,8 +150,9 @@
         <div class="tier">
           <h3>Solo Practice</h3>
           <p class="tier-sub">For a single doctor</p>
-          <div class="price">₹699</div>
+          <div class="price">₹519</div>
           <p class="price-note">per doctor / month, billed annually &middot; negotiable</p>
+          <p class="trial-badge">15-day free trial</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>WHO &amp; IAP growth charts</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>IAP vaccination tracking</li>
@@ -164,8 +166,9 @@
         <div class="tier featured">
           <h3>Clinic</h3>
           <p class="tier-sub">For 2–5 doctors, one location</p>
-          <div class="price">₹549</div>
+          <div class="price">₹449</div>
           <p class="price-note">per doctor / month, billed annually &middot; negotiable</p>
+          <p class="trial-badge">15-day free trial</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Solo Practice</li>
             <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#1C4FB8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Free record migration</li>
@@ -191,7 +194,7 @@
 
       </div>
 
-      <p class="note">All plans include unlimited patients and no setup fee. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
+      <p class="note">All plans include unlimited patients, no setup fee, and a 15-day free trial. Target: less than what established EMR vendors charge independent practices — we'll quote a fair number for your practice size on the walkthrough call.</p>
 
       <div class="faq-strip">
         <h2>Not sure which tier fits?</h2>
