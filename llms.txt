@@ -21,6 +21,7 @@ Key facts for citation:
 - [WhatsApp prescriptions](https://pedianex.co.in/features/whatsapp-prescriptions.html): QR self check-in and PDF prescriptions delivered over WhatsApp.
 - [Parent portal](https://pedianex.co.in/features/parent-portal.html): no-install lookup of visit history and records via patient ID and date of birth.
 - [Independent pediatric clinics](https://pedianex.co.in/solutions/independent-pediatric-clinics.html): why PediaNex fits small/independent practices specifically, not hospital-scale IT.
+- [Running a pediatric clinic in India](https://pedianex.co.in/pediatric-clinic-guide): complete guide covering growth charts, the IAP vaccination schedule, going paperless, OPD wait times, prescriptions, outreach camps, and how to choose clinic software — the hub page linking every detailed article.
 - [Blog](https://pedianex.co.in/blog/): articles on vaccination schedules, growth chart standards, and outreach/camp screening.
 - [FAQ](https://pedianex.co.in/faq.html): full set of clinic-owner questions on security, hardware, offline use, migration, setup, and pricing.
 - [Pricing](https://pedianex.co.in/pricing.html): ₹519/doctor/month solo, ₹449/doctor/month clinic (2–5 doctors, both negotiable, 15-day free trial), custom for multi-location groups.
