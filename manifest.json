@@ -1,0 +1,34 @@
+{
+  "name": "PediaNex — Pediatric EMR Software",
+  "short_name": "PediaNex",
+  "description": "Pediatric EMR built inside a real clinic: WHO/IAP growth charts, IAP vaccination tracking, QR check-in, and WhatsApp-delivered prescriptions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1C4FB8",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/assets/icons/favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icons/favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/icons/favicon-maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
