@@ -3,6 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBTFKSXLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBTFKSXLH');
+  /* Google Ads */
+  gtag('config', 'AW-18432814461');
+  /* Lead-intent click tracking (WhatsApp + phone), all pages */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('wa.me/') > -1) {
+      gtag('event', 'whatsapp_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    } else if (h.indexOf('tel:') === 0) {
+      gtag('event', 'phone_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    }
+  }, true);
+</script>
 <title>ACVIP Immunization Schedule 2026 Explained | PediaNex</title>
 <meta name="description" content="What the ACVIP is, how its 2026 immunization schedule relates to the IAP schedule, and how pediatric clinics track both without confusing parents." />
 <link rel="canonical" href="https://pedianex.co.in/blog/acvip-immunization-schedule-2026" />

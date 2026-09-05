@@ -56,3 +56,6 @@ dc94bcd575ef04dae86b0beb9f8e6ae3.txt
 # Misc
 *.local
 coverage/
+
+# Google Ads working notes (local only, not site content)
+ads-plan/

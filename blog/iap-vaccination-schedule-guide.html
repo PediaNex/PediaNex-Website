@@ -3,6 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBTFKSXLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBTFKSXLH');
+  /* Google Ads */
+  gtag('config', 'AW-18432814461');
+  /* Lead-intent click tracking (WhatsApp + phone), all pages */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('wa.me/') > -1) {
+      gtag('event', 'whatsapp_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    } else if (h.indexOf('tel:') === 0) {
+      gtag('event', 'phone_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    }
+  }, true);
+</script>
 <title>IAP Vaccination Schedule 2026: Complete Guide | PediaNex</title>
 <meta name="description" content="A plain-language walk through the IAP immunization schedule from birth through the teen years, and how clinics track it without a paper card." />
 <link rel="canonical" href="https://pedianex.co.in/blog/iap-vaccination-schedule-guide" />
@@ -44,7 +67,7 @@
       "headline": "IAP Vaccination Schedule 2026: Complete Guide",
       "description": "A plain-language walk through the IAP immunization schedule from birth through the teen years, with what each visit covers and how clinics track it without a paper card.",
       "datePublished": "2026-07-15",
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-09-04",
       "author": {"@type": "Organization", "name": "PediaNex", "url": "https://pedianex.co.in/"},
       "publisher": {"@type": "Organization", "name": "PediaNex", "url": "https://pedianex.co.in/"},
       "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pedianex.co.in/blog/iap-vaccination-schedule-guide"}
@@ -55,6 +78,7 @@
         {"@type": "Question", "name": "What is the IAP vaccination schedule?", "acceptedAnswer": {"@type": "Answer", "text": "The IAP immunization schedule is the routine vaccination timetable recommended by the Indian Academy of Pediatrics' Advisory Committee on Vaccines and Immunization Practices (ACVIP), covering birth through 18 years."}},
         {"@type": "Question", "name": "Is the IAP schedule the same as the government's Universal Immunization Programme?", "acceptedAnswer": {"@type": "Answer", "text": "No. The IAP schedule includes additional vaccines beyond the government's free Universal Immunization Programme (UIP), such as pneumococcal, rotavirus, and hepatitis A vaccines. Both share the same core UIP vaccines, but the IAP schedule is broader."}},
         {"@type": "Question", "name": "What vaccines are given at birth per the IAP schedule?", "acceptedAnswer": {"@type": "Answer", "text": "At birth, the IAP schedule recommends BCG, the birth dose of hepatitis B, and OPV 0, ideally within 24 hours of birth."}},
+        {"@type": "Question", "name": "What is the IPV vaccine schedule?", "acceptedAnswer": {"@type": "Answer", "text": "IPV (Inactivated Polio Vaccine) is given at 6, 10, and 14 weeks as part of the primary series, usually bundled into a pentavalent or hexavalent combination shot, followed by a booster at 15-18 months. The government's free programme uses a fractional IPV dose at 6 and 14 weeks alongside OPV, while private clinics following the IAP schedule typically use full-dose IPV in a combination vaccine."}},
         {"@type": "Question", "name": "Does the IAP schedule cover teenagers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IAP schedule extends through 16-18 years, including boosters like Tdap around 10-12 years and HPV vaccination for adolescents."}},
         {"@type": "Question", "name": "What happens if a dose is missed or delayed?", "acceptedAnswer": {"@type": "Answer", "text": "Most vaccines on the schedule can be caught up later, but a few — rotavirus in particular — have an upper age limit for starting. Talk to your pediatrician about a catch-up plan rather than skipping a delayed dose."}}
       ]
@@ -257,6 +281,18 @@
         <p>Three primary doses of DTP (diphtheria, tetanus, pertussis), IPV (injectable polio), Hib (haemophilus influenzae type b, usually combined into a pentavalent shot with DTP and hepatitis B), and PCV. Rotavirus vaccine is also given in this window, on a schedule that has an upper age cutoff, so it needs to start on time.</p>
       </div>
 
+      <h2>IPV vaccine schedule: what it is and when it's given</h2>
+      <p>IPV (Inactivated Polio Vaccine) is the injectable form of the polio vaccine, given as a shot rather than oral drops. It's given alongside — not instead of — OPV (Oral Polio Vaccine), because India's polio strategy relies on both: OPV for broad community immunity, and IPV because it produces a stronger, more reliable immune response in the individual child and doesn't carry OPV's very small risk of vaccine-derived polio.</p>
+      <div class="schedule-block">
+        <h3>IPV dosing on the IAP schedule</h3>
+        <p>Under the IAP/private-clinic schedule, IPV is typically given as full intramuscular doses at <strong>6, 10, and 14 weeks</strong> (the same primary-series window as DTP and Hib), usually bundled into a pentavalent or hexavalent combination shot rather than as a separate injection. A booster dose follows at <strong>15&ndash;18 months</strong>, alongside the DTP booster.</p>
+      </div>
+      <div class="schedule-block">
+        <h3>IPV under the government (UIP) schedule</h3>
+        <p>The government's free Universal Immunization Programme uses a fractional IPV (fIPV) — a smaller, intradermal dose — given at <strong>6 and 14 weeks</strong> alongside OPV doses, rather than the full-dose intramuscular schedule used in the private/IAP combination vaccines. Both approaches are valid; a private clinic following the IAP schedule and a government center following the UIP schedule are using different formulations of the same vaccine, not different vaccines.</p>
+      </div>
+      <p>Because IPV is almost always bundled into a combination vaccine (pentavalent or hexavalent) in private pediatric clinics, parents often don't realize their child has already received it — it doesn't usually show up as a separate line item unless the clinic's record breaks the combination shot down by component.</p>
+
       <div class="schedule-block">
         <h3>6 to 9 months</h3>
         <p>A dose of oral polio vaccine and completion of the primary hepatitis B series are typically covered here, along with the first measles-containing vaccine — MR (measles-rubella) under the government schedule, or MMR (measles-mumps-rubella) if following the IAP's private-market recommendation — usually around 9 months.</p>
@@ -313,6 +349,7 @@
         <details open><summary>What is the IAP vaccination schedule?</summary><p>It's the routine immunization timetable recommended by the Indian Academy of Pediatrics' vaccine advisory committee (ACVIP), covering children from birth through 16&ndash;18 years.</p></details>
         <details><summary>Is the IAP schedule the same as the government's Universal Immunization Programme?</summary><p>No. They share the same core vaccines, but the IAP schedule also recommends additional vaccines — such as pneumococcal, rotavirus, and hepatitis A — that aren't part of the free government programme everywhere.</p></details>
         <details><summary>What vaccines are given at birth per the IAP schedule?</summary><p>BCG, the birth dose of hepatitis B, and OPV 0, ideally all within 24 hours of birth.</p></details>
+        <details><summary>What is the IPV vaccine schedule?</summary><p>IPV (Inactivated Polio Vaccine) is given at 6, 10, and 14 weeks as part of the primary series, usually bundled into a pentavalent or hexavalent combination shot, followed by a booster at 15&ndash;18 months. The government's free programme uses a fractional IPV dose at 6 and 14 weeks alongside OPV, while private clinics following the IAP schedule typically use full-dose IPV in a combination vaccine.</p></details>
         <details><summary>Does the IAP schedule cover teenagers?</summary><p>Yes. It extends through 16&ndash;18 years, including a Tdap booster around 10&ndash;12 years and HPV vaccination during adolescence.</p></details>
         <details><summary>What happens if a dose is missed or delayed?</summary><p>Most vaccines on the schedule can be caught up later, but a few — rotavirus in particular — have an upper age limit for starting. Talk to your pediatrician about a catch-up plan rather than skipping a delayed dose.</p></details>
       </div>

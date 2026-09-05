@@ -3,6 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBTFKSXLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBTFKSXLH');
+  /* Google Ads */
+  gtag('config', 'AW-18432814461');
+  /* Lead-intent click tracking (WhatsApp + phone), all pages */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('wa.me/') > -1) {
+      gtag('event', 'whatsapp_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    } else if (h.indexOf('tel:') === 0) {
+      gtag('event', 'phone_click', {page_path: location.pathname});
+      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+    }
+  }, true);
+</script>
 <title>Privacy Policy — PediaNex</title>
 <meta name="description" content="How PediaNex collects, uses, stores, and protects clinic, doctor, and patient data across the pediatric EMR platform." />
 <link rel="canonical" href="https://pedianex.co.in/privacy" />
@@ -80,7 +103,7 @@
 <main>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 24, 2026 &middot; Effective for: pedianex.co.in and the PediaNex clinical application</p>
+    <p class="updated">Last updated: September 6, 2026 &middot; Effective for: pedianex.co.in and the PediaNex clinical application</p>
 
     <div class="callout">
       <p>PediaNex is a pediatric EMR used by clinics to manage patient records, including children's health information. This policy explains what we collect, why, and what rights you have. If you're a parent or guardian, your clinic (not PediaNex) is usually the one who decided to use this software to manage your child's records — see "Our role vs. your clinic's role" below.</p>
@@ -101,7 +124,7 @@
       <tr><td>Patient records (entered by clinic staff)</td><td>Child's name, date of birth, sex, guardian contact details, growth measurements, vaccination history, diagnoses, prescriptions, visit notes, uploaded documents</td></tr>
       <tr><td>Parents/guardians (via the parent portal)</td><td>Patient ID and date of birth used to look up records; no separate account or password is created. Phone number, for one-time-password (OTP) verification via our SMS provider, MSG91</td></tr>
       <tr><td>Website visitors</td><td>Name, role, and number of doctors, if you submit the "Book a walkthrough" form (sent via WhatsApp, not stored on our servers)</td></tr>
-      <tr><td>Automatically</td><td>Basic device/browser information via standard web server logs. We do not currently run analytics or advertising trackers on this site.</td></tr>
+      <tr><td>Automatically (marketing website only)</td><td>Basic device/browser information via standard web server logs. In addition, the marketing website uses Google Analytics 4 to record pages viewed, approximate location (city/country level, derived from a truncated IP address), device and browser type, referring source, and a small number of interaction events &mdash; specifically, clicks on our WhatsApp and phone links and submissions of the "Book a walkthrough" form. Where you reached us from a Google advertisement, this also allows us to see that the visit came from that ad. This applies to <strong>pedianex.co.in only</strong>; the clinical application does not run analytics or advertising trackers, and no patient health data is ever collected by, or passed to, these tools.</td></tr>
     </table>
 
     <h2>4. How we use this information</h2>
@@ -111,6 +134,7 @@
       <li>To operate the parent portal lookup feature</li>
       <li>To maintain security, prevent misuse, and debug issues with the platform</li>
       <li>To respond to walkthrough requests and support inquiries</li>
+      <li>To understand how visitors find and use our marketing website, and to measure whether our advertising reaches pediatric clinics who find PediaNex useful &mdash; using website analytics data only</li>
       <li><strong>We do not sell personal or patient data, and do not use patient health data for advertising, under any circumstances</strong></li>
     </ul>
 
@@ -120,6 +144,7 @@
       <li><strong>Cloud hosting/storage provider</strong> — Firebase (Google), which currently hosts the application and patient data. We are migrating towards a setup using a self-managed VPS with Supabase for the core database, with Firebase retained for PDF generation/storage. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's Privacy and Security in Firebase</a></li>
       <li><strong>MSG91</strong> — our SMS provider, used to send one-time passwords (OTPs) for parent portal phone verification. Only the phone number and OTP are shared for this purpose; see <a href="https://msg91.com/privacy-policy" target="_blank" rel="noopener">MSG91's Privacy Policy</a></li>
       <li><strong>WhatsApp (Meta Platforms, Inc.)</strong> — prescriptions, certificates, and walkthrough messages are delivered via WhatsApp's messaging infrastructure at the clinic's or your instruction. Message content passes through WhatsApp/Meta's systems; see <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">WhatsApp's Privacy Policy</a></li>
+      <li><strong>Google Analytics and Google Ads (Google LLC)</strong> &mdash; used on the marketing website (pedianex.co.in) only, to measure site traffic and the effectiveness of our advertising. Google receives the website usage information described in section 3, and may use cookies or similar identifiers to do so. Google is not given access to the clinical application or to any patient health data. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a></li>
       <li><strong>Legal or regulatory bodies</strong> — only if required by applicable law, or to protect the rights, safety, or property of PediaNex, our clinics, or their patients</li>
     </ul>
     <p>We do not share patient health data with any third party for their own marketing or research purposes.</p>
@@ -147,7 +172,10 @@
     <p>To exercise any of these rights regarding patient records, contact your clinic first. For anything else, contact us using the details below.</p>
 
     <h2>10. Cookies</h2>
-    <p>The marketing website (pedianex.co.in) does not set analytics, advertising, or tracking cookies. It loads fonts from Google Fonts, which may involve a connection to Google's servers. The application itself uses a session cookie/token required for you to stay logged in — this is strictly necessary and not used for tracking.</p>
+    <p>The marketing website (pedianex.co.in) uses Google Analytics 4, which sets cookies (or similar browser identifiers) to recognise returning visits and measure how the site is used. Where a visit arrives from one of our Google advertisements, Google may also set cookies used to measure the effectiveness of that ad. These are analytics and advertising cookies, not strictly necessary ones, and they are used only for the purposes described in sections 3 and 4.</p>
+    <p>The site also loads fonts from Google Fonts, which may involve a connection to Google's servers.</p>
+    <p><strong>The clinical application sets no analytics or advertising cookies.</strong> It uses a session cookie/token required for you to stay logged in — this is strictly necessary and not used for tracking. Patient health data is never used for advertising or shared with advertising services under any circumstances.</p>
+    <p>You can block or delete cookies through your browser settings, and you can prevent Google Analytics from collecting your data using Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">browser opt-out add-on</a>. Blocking these cookies does not affect your ability to use the site or the application.</p>
 
     <h2>11. Changes to this policy</h2>
     <p>We may update this policy as the product evolves, particularly as we move from single-clinic use to a multi-practice product. Material changes will be reflected here with an updated "Last updated" date, and where required by law, we will notify affected clinics directly.</p>
