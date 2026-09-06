@@ -19,10 +19,10 @@
     var h = a.getAttribute('href') || '';
     if (h.indexOf('wa.me/') > -1) {
       gtag('event', 'whatsapp_click', {page_path: location.pathname});
-      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+      gtag('event','conversion',{send_to:'AW-18432814461/JigHCPGUgPAcEP3audVE'});
     } else if (h.indexOf('tel:') === 0) {
       gtag('event', 'phone_click', {page_path: location.pathname});
-      /* gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+      gtag('event','conversion',{send_to:'AW-18432814461/JigHCPGUgPAcEP3audVE'});
     }
   }, true);
 </script>
@@ -163,6 +163,23 @@
   .wt-err{color:#B8351F; font-size:var(--text-xs); margin-top:4px; display:none;}
   .wt-field.error input{border-color:#B8351F;}
   .wt-field.error .wt-err{display:block;}
+
+  /* Offer popup */
+  .promo-overlay{position:fixed; inset:0; background:rgba(4,10,18,.6); display:none; align-items:center; justify-content:center; padding:20px; z-index:120;}
+  .promo-overlay.open{display:flex;}
+  .promo{background:var(--paper); border-radius:20px; box-shadow:0 20px 60px rgba(6,14,30,.35); width:100%; max-width:460px; padding:34px 32px 30px; position:relative; text-align:center;}
+  .promo .promo-eyebrow{display:inline-block; background:var(--blue-tint); color:var(--blue); font-size:var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:6px 13px; border-radius:999px;}
+  .promo h3{font-size:clamp(1.4rem, 1.2rem + 1vw, 1.75rem); line-height:1.15; margin:16px 0 12px;}
+  .promo h3 em{font-style:normal; color:var(--blue);}
+  .promo .promo-sub{color:var(--ink-soft); font-size:var(--text-sm); margin:0 0 20px;}
+  .promo .promo-points{list-style:none; margin:0 0 24px; padding:0; text-align:left; display:inline-block;}
+  .promo .promo-points li{font-size:var(--text-sm); color:var(--ink-soft); padding-left:26px; position:relative; margin-bottom:9px;}
+  .promo .promo-points li::before{content:""; position:absolute; left:0; top:6px; width:15px; height:9px; border-left:2.4px solid var(--blue); border-bottom:2.4px solid var(--blue); transform:rotate(-45deg);}
+  .promo .btn{width:100%; justify-content:center;}
+  .promo .promo-dismiss{display:block; width:100%; margin-top:14px; background:none; border:none; font:inherit; font-size:var(--text-sm); color:var(--muted); cursor:pointer; text-decoration:underline; text-underline-offset:3px;}
+  .promo-close{position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; border:1px solid var(--line); background:transparent; color:var(--ink-soft); display:flex; align-items:center; justify-content:center; cursor:pointer;}
+  .promo-close:hover{border-color:var(--blue); color:var(--blue);}
+  @media (max-width:480px){ .promo{padding:28px 22px 24px;} }
 
   /* Header */
   header.site{position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-soft);}
@@ -772,6 +789,24 @@
 
 </main>
 
+<div class="promo-overlay" id="promoOverlay">
+  <div class="promo" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+    <button type="button" class="promo-close" id="promoClose" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 1 L13 13 M13 1 L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <span class="promo-eyebrow">New offer</span>
+    <h3 id="promoTitle">Two months of PediaNex, <em>completely free.</em></h3>
+    <p class="promo-sub">We're opening the system to a small number of pediatric clinics. Just message us &mdash; that's the whole process.</p>
+    <ul class="promo-points">
+      <li>No form to fill in, no link to follow</li>
+      <li>No card, no payment details</li>
+      <li>We set your clinic up for you</li>
+    </ul>
+    <a class="btn btn-primary" id="promoCta" href="https://wa.me/917357397888?text=Hi%2C%20I%27d%20like%20the%202%20months%20free%20trial%20of%20PediaNex%20for%20my%20clinic." target="_blank" rel="noopener">Message us on WhatsApp</a>
+    <button type="button" class="promo-dismiss" id="promoDismiss">No thanks, keep looking around</button>
+  </div>
+</div>
+
 <div class="wt-overlay" id="wtOverlay">
   <div class="wt-modal" role="dialog" aria-modal="true" aria-labelledby="wtTitle">
     <button type="button" class="wt-close" id="wtClose" aria-label="Close">
@@ -898,13 +933,68 @@
         doctors: doctors,
         page_path: location.pathname
       });
-      /* Google Ads conversion — enable once the AW- id and label exist:
-      gtag('event','conversion',{send_to:'AW-XXXXXXXXX/LABEL'}); */
+
+      gtag('event','conversion',{send_to:'AW-18432814461/JigHCPGUgPAcEP3audVE'});
 
       var url = "https://wa.me/917357397888?text=" + encodeURIComponent(message);
       window.open(url, '_blank', 'noopener');
       closeModal();
       form.reset();
+    });
+  })();
+
+  /* Offer popup — exit intent on desktop, scroll depth on mobile, shown once */
+  (function () {
+    var KEY = 'pn_offer_seen';
+    var overlay = document.getElementById('promoOverlay');
+    if (!overlay) return;
+
+    var seen = false;
+    try { seen = localStorage.getItem(KEY) === '1'; } catch (e) {}
+    if (seen) return;
+
+    var shown = false;
+    var ready = false;
+    setTimeout(function () { ready = true; }, 6000);
+
+    function remember() {
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    }
+    function show(trigger) {
+      if (shown || !ready) return;
+      if (document.getElementById('wtOverlay').classList.contains('open')) return;
+      shown = true;
+      overlay.classList.add('open');
+      remember();
+      if (window.gtag) gtag('event', 'offer_popup_shown', {trigger: trigger});
+      document.getElementById('promoClose').focus();
+    }
+    function hide() {
+      overlay.classList.remove('open');
+    }
+
+    /* Desktop: cursor leaves through the top of the viewport */
+    document.addEventListener('mouseout', function (e) {
+      if (e.clientY <= 0 && !e.relatedTarget) show('exit_intent');
+    });
+
+    /* Mobile has no cursor — use scroll depth instead */
+    var onScroll = function () {
+      var d = document.documentElement;
+      var pct = (window.scrollY + window.innerHeight) / d.scrollHeight;
+      if (pct >= 0.7) { show('scroll_depth'); window.removeEventListener('scroll', onScroll); }
+    };
+    window.addEventListener('scroll', onScroll, {passive: true});
+
+    document.getElementById('promoClose').addEventListener('click', hide);
+    document.getElementById('promoDismiss').addEventListener('click', hide);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) hide(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) hide();
+    });
+    document.getElementById('promoCta').addEventListener('click', function () {
+      if (window.gtag) gtag('event', 'offer_popup_accepted', {page_path: location.pathname});
+      hide();
     });
   })();
 </script>
