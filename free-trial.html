@@ -172,15 +172,14 @@
 
   /* Comparison table */
   .cmp-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  table.cmp{width:100%; border-collapse:collapse; min-width:620px; font-size:var(--text-sm);}
+  table.cmp{width:100%; border-collapse:collapse; min-width:520px; font-size:var(--text-sm);}
   table.cmp th, table.cmp td{text-align:left; padding:15px 16px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
   table.cmp thead th{font-family:var(--display); font-size:var(--text-sm); font-weight:700; border-bottom:1px solid var(--line);}
   table.cmp thead th.us{color:var(--blue);}
-  table.cmp tbody th{font-weight:600; color:var(--ink); width:34%;}
+  table.cmp tbody th{font-weight:600; color:var(--ink); width:30%;}
   table.cmp td{color:var(--ink-soft);}
   table.cmp td.us{background:var(--blue-tint); color:var(--blue-deep); font-weight:600;}
   table.cmp tbody tr:last-child th, table.cmp tbody tr:last-child td{border-bottom:none;}
-  .cmp-note{margin-top:18px; font-size:var(--text-xs); color:var(--muted); max-width:70ch;}
 
   /* Real screenshots */
   .feature-row{display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:center; padding:40px 0; border-top:1px solid var(--line-soft);}
@@ -569,8 +568,8 @@
   <section id="compare">
     <div class="wrap">
       <div class="section-head">
-        <h2>Why not a general clinic EMR?</h2>
-        <p>Docon and Doctorz are capable platforms built to serve every specialty. PediaNex does one specialty properly.</p>
+        <h2>Why pediatric-only?</h2>
+        <p>Docon is a capable platform serving many specialties, and it handles children's care well. PediaNex does one specialty and nothing else.</p>
       </div>
       <div class="cmp-scroll">
         <table class="cmp">
@@ -579,7 +578,6 @@
               <th scope="col">&nbsp;</th>
               <th scope="col" class="us">PediaNex</th>
               <th scope="col">Docon</th>
-              <th scope="col">Doctorz</th>
             </tr>
           </thead>
           <tbody>
@@ -587,42 +585,50 @@
               <th scope="row">Built for</th>
               <td class="us">Pediatrics only</td>
               <td>All specialties</td>
-              <td>All specialties</td>
             </tr>
             <tr>
-              <th scope="row">WHO &amp; IAP growth charts</th>
-              <td class="us">Built in, auto-plotted by age and sex</td>
-              <td>Not pediatric-specific</td>
-              <td>Not pediatric-specific</td>
+              <th scope="row">Growth charts</th>
+              <td class="us">WHO and IAP, auto-plotted by age and sex</td>
+              <td>Yes &mdash; WHO, IAP, Fenton and CDC</td>
             </tr>
             <tr>
-              <th scope="row">IAP vaccination schedule</th>
-              <td class="us">Full schedule, tracked per dose</td>
-              <td>Not pediatric-specific</td>
-              <td>Not pediatric-specific</td>
+              <th scope="row">Vaccination</th>
+              <td class="us">Full IAP schedule, tracked per dose with brand and date</td>
+              <td>Vaccination reminders</td>
             </tr>
             <tr>
-              <th scope="row">Parent portal</th>
-              <td class="us">No app needed, ID + date of birth</td>
-              <td>Varies by plan</td>
-              <td>Varies by plan</td>
+              <th scope="row">Parent access</th>
+              <td class="us">No app to install &mdash; patient ID and date of birth in any browser</td>
+              <td>Patient messaging</td>
             </tr>
             <tr>
               <th scope="row">Camp &amp; school screening mode</th>
               <td class="us">Standalone, works offline</td>
-              <td>Not offered</td>
-              <td>Not offered</td>
+              <td>Not stated publicly</td>
+            </tr>
+            <tr>
+              <th scope="row">Price</th>
+              <td class="us">&#8377;519 per doctor per month solo, &#8377;449 for a 2&ndash;5 doctor clinic &mdash; published openly, and negotiable</td>
+              <td>&#8377;600 per doctor per month</td>
+            </tr>
+            <tr>
+              <th scope="row">Free trial</th>
+              <td class="us">Two full months, no card taken</td>
+              <td>15-day free trial</td>
+            </tr>
+            <tr>
+              <th scope="row">Getting started</th>
+              <td class="us">We migrate your records and set the clinic up, free</td>
+              <td>Not stated publicly</td>
             </tr>
             <tr>
               <th scope="row">Built by</th>
               <td class="us">A working pediatric clinic, for its own use</td>
               <td>A software company</td>
-              <td>A software company</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="cmp-note">Comparison based on publicly available information at the time of writing. Docon and Doctorz are trademarks of their respective owners and are not affiliated with PediaNex. Their feature sets change &mdash; please verify anything that matters to your decision directly with them.</p>
     </div>
   </section>
 
